@@ -1,8 +1,14 @@
 import express from "express";
 import { list } from "./controller/items";
 
-const PORT: number = 3000;
+const PORT: number = 4000;
 const app: express.Express = express();
+
+app.use((req, res, next) => {
+  res.header("Access-Control-Allow-Origin", "*")
+  res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept")
+  next()
+})
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
