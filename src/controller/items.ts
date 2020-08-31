@@ -9,6 +9,7 @@ type Item = {
 const items: Item[] = [
   { name: "ピコグリルもどき", category: "焚き火台", weight: 400 },
   { name: "ティピーテント", category: "テント", weight: 2200 },
+  { name: "火吹き棒", category: "焚き火グッズ"  },
 ];
 
 const list = async (
